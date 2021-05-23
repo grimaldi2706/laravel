@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\TareasDiariasController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,6 +13,14 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::resource('/task', TareasDiariasController::class);
+
+/*
+Route::get('/task', function () {
+    return view('task');
+});
+*/
 Route::get('/', function () {
-    return view('index');
+    #return view('index');
+    return "aca no es";
 });

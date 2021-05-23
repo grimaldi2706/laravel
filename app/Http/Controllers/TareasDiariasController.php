@@ -14,7 +14,9 @@ class TareasDiariasController extends Controller
      */
     public function index()
     {
-        //
+        $listar = tareas_diarias::all();
+        //$listar = tareas_diarias::orderBy('nombre_tarea')->simplePaginate(1);
+        return view('task', compact('listar')); 
     }
 
     /**
