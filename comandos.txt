@@ -1,0 +1,7 @@
+#Iniciar Servidor
+php artisan serve
+
+#Crear model, factory, created, seeder, controller 
+php artisan make:model tareas_diarias --all
+
+#Ejecutar migracion
