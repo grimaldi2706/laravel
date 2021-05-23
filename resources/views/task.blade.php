@@ -8,7 +8,7 @@
                 <div class="card">
                     <div class="card-header">
                         <strong>Lista de Tareas</strong>
-                        
+                        <a href="{{ route('task.create') }}" class="btn btn-sm btn-success pull-right">Ingresar</a>
                     </div> 
                     <div class="card-body">
                         <table class="table">
@@ -26,8 +26,8 @@
                                         <td>{{ $item->nombre_tarea}}</td>
                                         <td>{{ $item->bloque_trabajo}}</td>
                                         <td>{{ $item->estado}}</td>
-                                        <td><button href="" class = "btn btn-sm btn-secondary">Ver</button></td>
-                                        <td><button class = "btn btn-sm btn-primary">Editar</button></td>
+                                        <td><a href="{{ route('task.show', $item->id) }}" class="btn btn-sm btn-secondary">Ver</a></td>
+                                        <td><a href="{{ route('task.edit', $item->id) }}" class="btn btn-sm btn-primary">Editar</a></td>
                                         <td>
                                             <form action = "" method = "POST">
                                                 @method('DELETE')
@@ -38,7 +38,7 @@
                                     </tr>
                                 @endforeach
                             </tbody>
-                        </table>
+                        </table>                   
                     </div>
                 </div>
             </div>

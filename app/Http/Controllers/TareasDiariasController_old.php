@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use App\Models\tareas_diarias;
+use Illuminate\Http\Request;
 
 class TareasDiariasController extends Controller
 {
@@ -37,28 +37,27 @@ class TareasDiariasController extends Controller
      */
     public function store(Request $request)
     {
-        
+        //
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param  \App\Models\tareas_diarias  $tareas_diarias
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(tareas_diarias $tareas_diarias)
     {
-        $datos = tareas_diarias::find($id);
-        return view('show', compact('datos'));  
+        //
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param  \App\Models\tareas_diarias  $tareas_diarias
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(tareas_diarias $tareas_diarias)
     {
         //
     }
@@ -67,10 +66,10 @@ class TareasDiariasController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param  \App\Models\tareas_diarias  $tareas_diarias
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, tareas_diarias $tareas_diarias)
     {
         //
     }
@@ -78,10 +77,10 @@ class TareasDiariasController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param  \App\Models\tareas_diarias  $tareas_diarias
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(tareas_diarias $tareas_diarias)
     {
         //
     }
